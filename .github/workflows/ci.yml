@@ -65,7 +65,7 @@ jobs:
         run: npx surge --project ./build --domain neat-point.surge.sh
       - name: Deploy to Production
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
-        run: npx surge --project ./build --domain the-real-react.surge.sh`
+        run: npx surge --project ./build --domain the-real-react.surge.sh
       - name: Uplaod Coverage Reports
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         run: npx codecov
